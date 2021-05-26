@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <!--width=device-width页面宽度=设备宽度 user-scalable=no用户是否可以缩放 initial-scale=1.0初始缩放比例/最大最小缩放比例 -->
+    <title>简易画板</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="//at.alicdn.com/t/font_2202670_87w21gi5nnw.js"></script>
+  </head>
+
+  <body id="canvasBody" class="canvasBody box">
+    <header id="toBar" class="topBar toCenter">
+      <div class="myTitle">
+        <p>M y C a n v a s</p>
+      </div>
+    </header>
+    <main id="paintBoard" class="clearfix boxLastSon box">
+      <canvas id="canvas" class="boxLastSon" ></canvas>
+      <div id="tools">
+
+        <!-- 清屏和下载 -->
+        <div id="deleteDownloadTools" class="deleteDownloadTools toCenter">
+          <div class="onlySon">
+            <div id="useDelete" class="seletion toCenter">
+              <svg class="icon" ><use xlink:href="#icon-delete"></use></svg>
+            </div>
+            <div id="useDownload" class="seletion toCenter">
+              <svg class="icon" ><use xlink:href="#icon-download"></use></svg>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 选择工具 -->
+        <div id="seletionTools" class="seletionTools toCenter">
+          <div class="onlySon">
+            <div id="usePen" class="seletion toCenter">
+              <svg class="icon" ><use xlink:href="#icon-pen"></use></svg>
+            </div>
+            <div id="useErase" class="seletion toCenter">
+              <svg class="icon" ><use xlink:href="#icon-Erasetext"></use></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 画笔 -->
+        <div id="pen" class="pen">
+          <div id="useingPen" class="nowTools toCenter"><p>绘图</p></div>
+
+          <div class="uponColor toCenter">
+            <div  id="uponPenColor"></div>
+          </div>
+
+          <div  id="selectPenColor" class="toCenter">
+            <div id="nineColor" class="clearfix"></div>
+          </div>
+
+          <div class="uponDiamiter toCenter">
+            <div  id="uponPenDiamiter"></div>
+          </div>
+          
+          <div id = "selectPenDiamiter" class="toCenter">
+            <div id="fourDiamiter" class="clearfixid"></div>
+          </div>
+        </div>
+
+        <!-- 橡皮檫 -->
+        <div id="erase" class="erase">
+          <div id="useingErase"  class="nowTools toCenter"><p>橡皮擦</p></div>
+
+          <div class="uponErase toCenter">
+            <div id="uponEraseSize"></div>
+          </div>
+          <div  id="selectEraseSize" class="toCenter">
+            <div id="fourSize" class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="./main.js"></script>
+    <!-- <footer></footer> -->
+  </body>
+</html>
